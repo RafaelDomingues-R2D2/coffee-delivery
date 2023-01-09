@@ -10,6 +10,7 @@ export const HeaderContainer = styled.header`
 
         a:first-child {
             background-color: ${props => props.theme["purple-light"]};
+            color: ${props => props.theme["purple-dark"]};
 
             display: flex;
             align-items: center;
