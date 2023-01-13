@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const BannerContainer = styled.div`
     display: grid;
     grid-template-columns: 680px 1fr;
-    margin: 5rem -0.2rem;
     
     @media(max-width: 768px){
         grid-template-columns: 1fr;
@@ -38,6 +37,8 @@ export const BaseListItems = styled.div`
         display: flex;
         align-items: center;
         width: 100%;
+
+        font-size: 130%;
     }
 
     span {
