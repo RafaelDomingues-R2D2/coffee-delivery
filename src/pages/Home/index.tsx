@@ -6,8 +6,8 @@ export function Home(){
     return (
         <HomeContent>
             <Banner />
+                <h2>Nossos cafés</h2>
             <HomeList>
-                <h1>Nossos cafés</h1>
                 <Card />
             </HomeList>
         </HomeContent>

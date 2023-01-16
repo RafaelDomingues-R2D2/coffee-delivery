@@ -5,8 +5,12 @@ export const CardContent = styled.div`
 
     display: flex;
     justify-content: center;
+
     width: 14.22rem;
     height: 17.22rem;
+
+    margin-bottom: 2rem;
+    padding: 0;
 
     border-radius: 6px 36px;
 
