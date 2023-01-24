@@ -17,6 +17,9 @@ export const CardContent = styled.div`
     img {
         position: absolute;
         margin-top: -1.5rem;
+
+        height: 15%;
+        height: 15%;
     }
 `
 
@@ -103,7 +106,6 @@ export const CardListButton = styled.div`
 
         margin: 0;
 
-        /* border: none; */
         border: ${props => props.theme["base-button"]};
         border-radius: 8px;
 

@@ -1,5 +1,8 @@
-import { CurrencyDollar, MapPinLine } from "phosphor-react";
-import { CheckoutCart, CheckoutContent, CheckoutDataDelivery, CheckoutDataDeliveyListInputs, CheckoutDataOfPay, CheckoutOrder, CheckoutSelectedCoffees, Input } from "./styles";
+import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import { Card } from "./components/Card";
+import { ButtonPayTypes, CheckoutCart, CheckoutCartLeft, CheckoutCartRight, CheckoutContent, CheckoutDataDelivery,
+         CheckoutDataDeliveyListInputs, CheckoutDataOfPay, CheckoutOrder, CheckoutResult, 
+         CheckoutSelectedCoffees, CheckoutSummary, Input, PayButtonsList } from "./styles";
 
 export function Checkout(){
     return (
@@ -8,7 +11,7 @@ export function Checkout(){
             <strong>Complete seu pedido</strong>
 
                 <CheckoutDataDelivery>
-                    <strong><MapPinLine size={23}/>Endereço de Entrega</strong>
+                    <title><MapPinLine size={23} />Endereço de Entrega</title>
                     <p>Informe o endereço onde deseja receber seu pedido</p>
                     <CheckoutDataDeliveyListInputs>
                         <Input placeholder="CEP" type="text" inputWidth="short"/>
@@ -21,15 +24,36 @@ export function Checkout(){
                     </CheckoutDataDeliveyListInputs>
                 </CheckoutDataDelivery>
                 <CheckoutDataOfPay>
-                    <strong><CurrencyDollar size={23} />Pagamento</strong>
+                    <title><CurrencyDollar size={23} />Pagamento</title>
                     <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+                    <PayButtonsList>
+                        <ButtonPayTypes><CreditCard size={19} />CARTÃO DE CRÉDITO</ButtonPayTypes>
+                        <ButtonPayTypes><Bank size={19} />CARTÃO DE DÉBITO</ButtonPayTypes>
+                        <ButtonPayTypes><Money size={19} />DINHEIRO</ButtonPayTypes>
+                    </PayButtonsList>
                 </CheckoutDataOfPay>
             </CheckoutOrder>
             <CheckoutSelectedCoffees>
                 <strong>Cafés selecionados</strong>
 
                 <CheckoutCart>
-                    <button>Confirmar pedido</button>
+                    <Card />
+                    <Card />
+                    <CheckoutResult>
+                        <CheckoutSummary>
+                            <CheckoutCartLeft>
+                                <p>Total de itens</p>
+                                <p>Entrega</p>
+                                <strong>Total</strong>
+                            </CheckoutCartLeft>
+                            <CheckoutCartRight>
+                                <label><label>R$ </label>29,70</label>
+                                <label><label>R$ </label>3,50</label>
+                                <strong><strong>R$ </strong>3,50</strong>
+                            </CheckoutCartRight>
+                        </CheckoutSummary>
+                        <button>CONFIRMAR PEDIDO</button>
+                    </CheckoutResult>
                 </CheckoutCart>
             </CheckoutSelectedCoffees>
         </CheckoutContent>
